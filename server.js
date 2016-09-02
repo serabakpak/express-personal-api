@@ -19,10 +19,7 @@ app.use(function(req, res, next) {
 /************
  * DATABASE *
  ************/
-
 var db = require('./models');
-
-
 
 /**********
  * ROUTES *
@@ -50,6 +47,7 @@ app.get('/api/profile', function(req, res) {
   });
 });
 
+//get all destinations
 app.get('/api/destinations', function (req, res) {
   db.Destination.find(function(err, destinations) {
     if (err) {
@@ -58,7 +56,36 @@ app.get('/api/destinations', function (req, res) {
     res.json(destinations);
   });
 });
-// 
+
+//get one destination
+app.get('/api/destinations/:id', function(req, res) {
+  db.Destination.findOne({_id: req.params.id}, function(err, destination) {
+    res.json(destination);
+  });
+});
+
+//create a new destination
+app.post('/api/destinations', function(req, res) {
+  var newDestination = new db.Destination (req.body);
+  newDestination.save(function handleSavedDestination(err, savedDestination) {
+    res.json(savedDestination);
+  });
+});
+
+//update a destination
+
+
+
+//delete a destination
+// app.delete('/api/destinations/:id', function(req, res) {
+  
+// })
+
+
+
+
+
+ 
 
 /*
  * JSON API Endpoints

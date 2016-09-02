@@ -4,7 +4,34 @@ body {
   background-color: skyblue; /* Sanity Check! */
 }
 
+
 h1 {
   margin-top: 100px;
   text-align: center;
 }
+
+h2 {
+	text-align: center;
+}
+
+
+#destinations-form {
+	width: 40%;
+	margin: 0 auto;
+}
+
+
+label,
+input[type="text"],
+textarea {
+	padding: 5px;
+	width: 100%;
+	margin: 5px;
+}
+
+
+
+textarea {
+	height: 150px;
+}
+

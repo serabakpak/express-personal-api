@@ -23,8 +23,47 @@
         <div class="col-md-8 col-md-offset-2">
           <h1>Sera Bak</h1>
           <h4><a href="/api">Read My API Documentation</a></h4>
+          
+
+
+
         </div>
       </div>
     </div>
+
+    <h2>Add a new destination</h2>
+    <div class="container">
+      <div class="row">
+        <form method="POST" action="/api/destinations" id="destinations-form">
+          <div class="row">
+            <div class="col-md-4"><label for="name" >Name</label></div>
+            <div class="col-md-8"><input name="name" type="text"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"><label for="country">Country</label></div>
+            <div class="col-md-8"><input name="country" type="text"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"><label for="image">Image Url</label></div>
+            <div class="col-md-8"><input name="image" type="text"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"><label for="description" >Description</label></div>
+            <div class="col-md-8"><textarea name="description"></textarea></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"><label></label></div>
+            <div class="col-md-8"><input type="submit"></input></div>
+          </div>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
   </body>
 </html>
