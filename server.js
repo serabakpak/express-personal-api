@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // allow cross origin requests (optional)
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+// cors = cross origin resource sharing
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -57,7 +58,7 @@ app.get('/api/destinations', function (req, res) {
     res.json(destinations);
   });
 });
-
+// 
 
 /*
  * JSON API Endpoints
@@ -65,17 +66,9 @@ app.get('/api/destinations', function (req, res) {
 
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
-  res.json({
-    woopsIForgotToDocumentAllMyEndpoints: true, // I liked this name ;)
-    message: "Welcome to Sera's personal api! Here's what you need to know!",
-    documentationUrl: "https://github.com/serabakpak/express-personal-api/blob/master/README.md", 
-    baseUrl: "https://fathomless-plains-84466.herokuapp.com/", 
-    endpoints: [
-      {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, 
-      {method: "POST", path: "/api/destinations", description: "E.g. Create a new travel destination."} 
-    ]
-  })
+  //this is stringifying
+  var documents = require('./views/docs')
+  res.json(documents);
 });
 
 /**********

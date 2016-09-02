@@ -11,7 +11,6 @@ var seraBak = {
 	currentCity: "San Francisco"
 }
 
-
 var destinations_list = [
 	{
 	name: "Machu Picchu",
