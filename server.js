@@ -19,7 +19,9 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// var db = require('./models');
+var db = require('./models');
+
+
 
 /**********
  * ROUTES *
@@ -35,6 +37,17 @@ app.use(express.static('public'));
 
 app.get('/', function homepage(req, res) {
   res.sendFile(__dirname + '/views/index.html');
+});
+
+app.get('/api/destinations', function (req, res) {
+  console.log(res);
+  db.Destination.find(function(err, destinations) {
+    if (err) {
+      return console.log('index error: ' + err);
+    }
+    console.log(destinations);
+    res.json(destinations);
+  });
 });
 
 
