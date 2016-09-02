@@ -41,7 +41,7 @@ app.get('/', function homepage(req, res) {
 });
 
 app.get('/api/profile', function(req, res) {
-  db.Profile.find(function(err, profile) {
+  db.Profile.findOne(function(err, profile) {
     if (err) {
       return console.log('index error' + err);
     }
