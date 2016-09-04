@@ -7,13 +7,16 @@
     <title>Sera Bak</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-
+ -->
+    <script src="/scripts/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="/scripts/handlebars-v4.0.5.js"></script>
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
   </head>
@@ -21,15 +24,49 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <h1>Sera Bak</h1>
+          <h1>Sera Bak's Personal API Page</h1>
           <h4><a href="/api">Read My API Documentation</a></h4>
-          
-
-
-
         </div>
       </div>
     </div>
+
+    <div class="container" id="profile">
+      <script id="profile-template" type="text/x-handlebars-template">
+        <p><a href="{{githubLink}}">Github Link</a></p>
+        <p><img id="profile-image" src="{{githubProfileImage}}"></p>
+        <p><a href="{{personalSiteLink}}">Personal Site Link</a></p>
+        <p>{{currentCity}}</p>
+      </script>
+    </div>
+    <div class="container" id="destinations">
+      <ul id="destinations-list">
+        <script id="destinations-template" type="text/x-handlebars-template">
+        {{#each destinations}}
+          <li class="destinations-list-item">
+            <p>{{name}}</p>
+            <p>{{country}}</p>
+            <p><img src="{{image}}"></p>
+            <p>{{description}}</p>
+          </li>
+
+        {{/each}}
+        </script>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
 
     <h2>Add a new destination</h2>
     <div class="container">

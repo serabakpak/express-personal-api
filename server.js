@@ -77,15 +77,14 @@ app.post('/api/destinations', function(req, res) {
 
 
 //delete a destination
-// app.delete('/api/destinations/:id', function(req, res) {
-  
-// })
+app.delete('/api/destinations/:id', function(req, res) {
+  console.log('destinations delete: ', req.params);
+  db.Destination.findOneAndRemove({_id: req.params.id}, function(err,deletedDestination) {
+    res.json(deletedDestination);
+  });
+})
 
 
-
-
-
- 
 
 /*
  * JSON API Endpoints
