@@ -39,7 +39,7 @@
 
       </div>
       <div class="row">
-        <img id="hero-image" src="/images/goldengatebridge_crop.jpg">
+        <img id="hero-image" src="/images/goldengatebridge_crop.jpg" alt="Golden Gate Bridge">
       </div>
     <hr>  
     </section>
@@ -54,11 +54,11 @@
       <div class="row" id="append-profile">
         <script id="profile-template" type="text/x-handlebars-template">
           <div class="col-md-6">
-            <img id="profile-image" src="{{githubProfileImage}}">
+            <img id="profile-image" src="{{githubProfileImage}}"" alt="Sera Bak">
           </div>
           <div class="col-md-6">
-            <p><a href="{{githubLink}}">Github Link</a></p>
-            <p><a href="{{personalSiteLink}}">Personal Site Link</a></p>
+            <p><a href="{{githubLink}}">My Github</a></p>
+            <p><a href="{{personalSiteLink}}">My Portfolio</a></p>
             <p>{{currentCity}}</p>
           </div>
         </script>
@@ -77,7 +77,7 @@
         <script id="destinations-template" type="text/x-handlebars-template">
         {{#each destinations}}
           <div class="destinations-list-item col-md-3">
-            <p><img src="{{image}}"></p>
+            <p><img src="{{image}}" alt="{{name}}"></p>
             <p>{{name}}</p>
             <p>{{country}}</p>
             <p id="description"><em>{{description}}</em></p>
