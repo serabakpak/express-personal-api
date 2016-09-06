@@ -13,16 +13,28 @@ var seraBak = {
 
 var destinations_list = [
 	{
-	image: "https://cdn.getyourguide.com/niwziy2l9cvz/5lcTJjACzKCQo0AWk4eM6a/9eb008b6e9e3752dd17c1a7c83b2d6b8/peru-machu-picchu-004.jpg",
+	image: "https://lonelyplanetimages.imgix.net/mastheads/16641625.jpg?sharp=10&vib=20&w=1200",
 	name: "Machu Picchu",
 	country: "Peru",
-	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel. Fanny pack ugh roof party, scenester blue bottle meditation tacos food truck marfa portland forage gochujang. "
+	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel."
 	},
 	{
-	image: "http://www.telegraph.co.uk/content/dam/Travel/Tours/angkor%20wat-xlarge.jpg",
+	image: "http://whc.unesco.org/uploads/thumbs/site_0668_0067-750-0-20151104115852.jpg",
 	name: "Angkor Wat",
 	country: "Cambodia",
-	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel. Fanny pack ugh roof party, scenester blue bottle meditation tacos food truck marfa portland forage gochujang. "
+	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel."
+	},
+	{
+	image: "https://www.pandaw.com/images/destinations/Halong-Bay.jpg",
+	name: "Halong-Bay",
+	country: "Vietnam",
+	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel."
+	},
+	{
+	image: "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2011/10/hotel-kakslauttanen-igloo-village-lead.jpg",
+	name: "Kakslauttanen Artic Resort",
+	country: "Finland",
+	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel."
 	}
 ];
 db.Profile.remove({}, function(err, profile) {

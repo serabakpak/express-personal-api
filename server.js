@@ -100,7 +100,7 @@ app.delete('/api/destinations/:id', function(req, res) {
   db.Destination.findOneAndRemove({_id: req.params.id}, function(err,deletedDestination) {
     res.json(deletedDestination);
   });
-})
+});
 
 /**********
  * SERVER *

@@ -39,7 +39,7 @@
 
       </div>
       <div class="row">
-        <img id="hero-image" src="/images/goldengatebridge.jpeg">
+        <img id="hero-image" src="/images/goldengatebridge_crop.jpg">
       </div>
     <hr>  
     </section>
@@ -53,14 +53,14 @@
 
       <div class="row" id="append-profile">
         <script id="profile-template" type="text/x-handlebars-template">
-          <!-- <div class="col-md-6"> -->
+          <div class="col-md-6">
             <img id="profile-image" src="{{githubProfileImage}}">
-          <!-- </div> -->
-          <!-- <div class="col-md-6"> -->
+          </div>
+          <div class="col-md-6">
             <p><a href="{{githubLink}}">Github Link</a></p>
             <p><a href="{{personalSiteLink}}">Personal Site Link</a></p>
             <p>{{currentCity}}</p>
-          <!-- </div> -->
+          </div>
         </script>
 
       </div>
@@ -81,8 +81,14 @@
             <p>{{name}}</p>
             <p>{{country}}</p>
             <p id="description"><em>{{description}}</em></p>
-          </div>
+            <input class="hidden edit" type="text" value="{{description}}">
+            <button type="button" class="hidden edit btn btn-success saveBtn" value="Save" data-id={{_id}}>Save</button>
+            <button type="button" class="hidden edit btn btn-danger cancelBtn" value="Cancel">Cancel</button>
+            <button type="button" class="btn btn-default updateBtn">Edit Description</button>
 
+            <button type="button" class="btn btn-default deleteBtn" data-id={{_id}}>Delete</button>
+          </div>
+          
         {{/each}}
         </script>
       </div>
@@ -98,29 +104,27 @@
       <div class="row">
         <form method="POST" action="/api/destinations" id="destinations-form">
           <div class="row">
-            <div class="col-md-4"><label for="name" >Name</label></div>
-            <div class="col-md-8"><input name="name" type="text" required></div>
+            <div class="col-md-4"><label for="name">Name</label></div>
+            <div class="col-md-8"><input class="clear" name="name" type="text" required></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label for="country">Country</label></div>
-            <div class="col-md-8"><input name="country" type="text" required></div>
+            <div class="col-md-8"><input class="clear" name="country" type="text" required></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label for="image">Image Url</label></div>
-            <div class="col-md-8"><input name="image" type="text" required></div>
+            <div class="col-md-8"><input class="clear" name="image" type="text" required></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label for="description" >Description</label></div>
-            <div class="col-md-8"><textarea name="description" required></textarea></div>
+            <div class="col-md-8"><textarea class="clear" name="description" required></textarea></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label></label></div>
-            <div class="col-md-8"><input type="submit"></input></div>
+            <div class="col-md-8"><input class="btn btn-default" type="submit"></input></div>
           </div>
 
-
-
-        </form>
+      </form>
     </section>
     <footer>
       <div class="row">

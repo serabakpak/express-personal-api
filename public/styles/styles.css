@@ -6,25 +6,28 @@ body {
 
 nav {
 	display: inline-block;
-	margin-top: 5em;
+	/*margin-top: 5em;*/
+	padding-top: 1em;
 }
 
 nav a {
 	margin: 3em 3em 3em 0;
-	font-size: 20px;
+	font-size: 15px;
 	color: #888;
 	font-weight: 300;
 	text-transform: uppercase;
 
+
 }
 
 hr {
-	margin: 4em 0;
+	margin: 2em 0;
 
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-top: -15px;
+  /*margin-bottom: 30px;*/
   /*text-align: left;*/
   font-size: 70px;
   font-weight: bold;
@@ -40,7 +43,7 @@ h2 {
 
 #profile-image {
 	width: 50%
-	border-radius: 50%;
+	
 }
 
 img {
@@ -52,15 +55,16 @@ img {
 #append-profile {
 	text-align: center;
 	width: 40%;
+	margin: 0 auto;
 }
 
 
 .destinations-list-item {
-	height: 20em;
+	height: 30em;
 }
 
 .container {
-	width: 70%;
+	width: 75%;
 	margin: 0 auto;
 
 }
@@ -84,13 +88,18 @@ textarea {
 	height: 100px;
 }
 
+.hidden {
+	display: none;
+}
+
+
 footer {
 	background-color: #dfe0e2;
-	height: 13em;
+	height: 10em;
 }
 
 footer p {
     color: #888;
     text-align: center;
-    margin-top: 7em;
+    margin-top: 5em;
 }
