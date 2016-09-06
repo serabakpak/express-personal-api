@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styles.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
     <!-- VENDOR SCRIPTS -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
@@ -21,72 +21,97 @@
     <script src="/scripts/app.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>Sera Bak's Personal API Page</h1>
-          <h4><a href="/api">Read My API Documentation</a></h4>
-        </div>
-      </div>
-    </div>
+    <section class="container" id="nav-bar">  
+      <nav>
+        <a href="/api">API Doc</a>
+        <a href="#">Profile</a>
+        <a href="#">Destinations</a>
+        <a href="#">Add a new one</a>
+      </nav>
+    </section>
 
-    <div class="container" id="profile">
-      <script id="profile-template" type="text/x-handlebars-template">
-        <p><a href="{{githubLink}}">Github Link</a></p>
-        <p><img id="profile-image" src="{{githubProfileImage}}"></p>
-        <p><a href="{{personalSiteLink}}">Personal Site Link</a></p>
-        <p>{{currentCity}}</p>
-      </script>
-    </div>
-    <div class="container" id="destinations">
-      <ul id="destinations-list">
+    <section class="container" id="hero">
+      <div class="row">
+      <hr>
+          <h1>Sera's API</h1>
+          <!-- <h4><a href="/api">Read My API Documentation</a></h4> -->
+        
+
+      </div>
+      <div class="row">
+        <img id="hero-image" src="/images/goldengatebridge.jpeg">
+      </div>
+    <hr>  
+    </section>
+
+    
+
+    <section class="container" id="profile">
+      <div class="row">
+        <h2>About Me</h2>
+      </div>
+
+      <div class="row" id="append-profile">
+        <script id="profile-template" type="text/x-handlebars-template">
+          <!-- <div class="col-md-6"> -->
+            <img id="profile-image" src="{{githubProfileImage}}">
+          <!-- </div> -->
+          <!-- <div class="col-md-6"> -->
+            <p><a href="{{githubLink}}">Github Link</a></p>
+            <p><a href="{{personalSiteLink}}">Personal Site Link</a></p>
+            <p>{{currentCity}}</p>
+          <!-- </div> -->
+        </script>
+
+      </div>
+    <hr>
+    </section>
+    
+    
+
+    <section class="container" id="destinations">
+      <div class="row">
+        <h2>Places I want to visit</h2>
+      </div>
+      <div class="row" id="destinations-list">
         <script id="destinations-template" type="text/x-handlebars-template">
         {{#each destinations}}
-          <li class="destinations-list-item">
+          <div class="destinations-list-item col-md-3">
+            <p><img src="{{image}}"></p>
             <p>{{name}}</p>
             <p>{{country}}</p>
-            <p><img src="{{image}}"></p>
-            <p>{{description}}</p>
-          </li>
+            <p id="description"><em>{{description}}</em></p>
+          </div>
 
         {{/each}}
         </script>
-      </ul>
-    </div>
+      </div>
+    <hr>
+    </section>
 
 
 
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-    <h2>Add a new destination</h2>
-    <div class="container">
+    <section class="container" id="form">
+      <div class="row">
+       <h2>Add a new destination</h2>
+      </div>
       <div class="row">
         <form method="POST" action="/api/destinations" id="destinations-form">
           <div class="row">
             <div class="col-md-4"><label for="name" >Name</label></div>
-            <div class="col-md-8"><input name="name" type="text"></div>
+            <div class="col-md-8"><input name="name" type="text" required></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label for="country">Country</label></div>
-            <div class="col-md-8"><input name="country" type="text"></div>
+            <div class="col-md-8"><input name="country" type="text" required></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label for="image">Image Url</label></div>
-            <div class="col-md-8"><input name="image" type="text"></div>
+            <div class="col-md-8"><input name="image" type="text" required></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label for="description" >Description</label></div>
-            <div class="col-md-8"><textarea name="description"></textarea></div>
+            <div class="col-md-8"><textarea name="description" required></textarea></div>
           </div>
           <div class="row">
             <div class="col-md-4"><label></label></div>
@@ -96,8 +121,12 @@
 
 
         </form>
-    </div>
-
+    </section>
+    <footer>
+      <div class="row">
+        <p>Copyright &copy; 2016 by Sera Bak. All rights reserved.</p>
+      </div>
+    </footer>
 
 
 
