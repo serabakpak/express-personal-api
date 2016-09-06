@@ -13,16 +13,16 @@ var seraBak = {
 
 var destinations_list = [
 	{
+	image: "https://cdn.getyourguide.com/niwziy2l9cvz/5lcTJjACzKCQo0AWk4eM6a/9eb008b6e9e3752dd17c1a7c83b2d6b8/peru-machu-picchu-004.jpg",
 	name: "Machu Picchu",
 	country: "Peru",
-	image: "https://cdn.getyourguide.com/niwziy2l9cvz/5lcTJjACzKCQo0AWk4eM6a/9eb008b6e9e3752dd17c1a7c83b2d6b8/peru-machu-picchu-004.jpg",
-	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel. Fanny pack ugh roof party, scenester blue bottle meditation tacos food truck marfa portland forage gochujang. Pour-over crucifix helvetica kitsch. Fingerstache gochujang tattooed tilde. Stumptown taxidermy yr microdosing, heirloom gluten-free affogato aesthetic pinterest bicycle rights."
+	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel. Fanny pack ugh roof party, scenester blue bottle meditation tacos food truck marfa portland forage gochujang. "
 	},
 	{
+	image: "http://www.telegraph.co.uk/content/dam/Travel/Tours/angkor%20wat-xlarge.jpg",
 	name: "Angkor Wat",
 	country: "Cambodia",
-	image: "http://www.telegraph.co.uk/content/dam/Travel/Tours/angkor%20wat-xlarge.jpg",
-	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel. Fanny pack ugh roof party, scenester blue bottle meditation tacos food truck marfa portland forage gochujang. Pour-over crucifix helvetica kitsch. Fingerstache gochujang tattooed tilde. Stumptown taxidermy yr microdosing, heirloom gluten-free affogato aesthetic pinterest bicycle rights."
+	description: "3 wolf moon kickstarter intelligentsia tousled viral bitters. Pitchfork DIY banh mi pinterest vegan chia. YOLO artisan vegan forage biodiesel. Fanny pack ugh roof party, scenester blue bottle meditation tacos food truck marfa portland forage gochujang. "
 	}
 ];
 db.Profile.remove({}, function(err, profile) {

@@ -36,7 +36,7 @@ function handleProfileData(profileResult) {
 
   	var profileHtml = templateProfile(profileResult);
   	console.log("profileHtml: "+ profileHtml);
-	$('#profile').append(profileHtml);
+	$('#append-profile').append(profileHtml);
 
 }
 

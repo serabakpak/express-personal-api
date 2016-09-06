@@ -37,6 +37,18 @@ app.get('/', function homepage(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+
+/*
+ * JSON API Endpoints
+ */
+
+app.get('/api', function api_index(req, res) {
+  // TODO: Document all your api endpoints below
+  //this is stringifying
+  var documents = require('./views/docs')
+  res.json(documents);
+});
+
 app.get('/api/profile', function(req, res) {
   db.Profile.findOne(function(err, profile) {
     if (err) {
@@ -67,14 +79,20 @@ app.get('/api/destinations/:id', function(req, res) {
 //create a new destination
 app.post('/api/destinations', function(req, res) {
   var newDestination = new db.Destination (req.body);
-  newDestination.save(function handleSavedDestination(err, savedDestination) {
+  newDestination.save(function(err, savedDestination) {
     res.json(savedDestination);
   });
 });
 
-//update a destination
-
-
+//update a destination description
+app.put('/api/destinations/:id', function(req, res) {
+  db.Destination.findOne({_id: req.params.id}, function(err, foundDestination) {
+    foundDestination.description = req.body.description;
+    foundDestination.save(function(err, savedDestination) {
+      res.json(savedDestination);
+    });
+  });
+});
 
 //delete a destination
 app.delete('/api/destinations/:id', function(req, res) {
@@ -83,19 +101,6 @@ app.delete('/api/destinations/:id', function(req, res) {
     res.json(deletedDestination);
   });
 })
-
-
-
-/*
- * JSON API Endpoints
- */
-
-app.get('/api', function api_index(req, res) {
-  // TODO: Document all your api endpoints below
-  //this is stringifying
-  var documents = require('./views/docs')
-  res.json(documents);
-});
 
 /**********
  * SERVER *
